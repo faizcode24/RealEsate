@@ -1,0 +1,87 @@
+.location .box {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden; /* Ensure child elements are contained within the border radius */
+}
+
+.location img {
+  width: 100%; /* Make sure the image scales with its container */
+  border-radius: 5px;
+}
+
+.location .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%; /* Full height of the parent container */
+  width: 100%;
+  color: black;
+  z-index: 2; /* Make sure it stays above other elements */
+  background: rgba(15 28 47 / 30%); /* Optional: add a semi-transparent background */
+}
+
+.location h5 {
+  font-size: 1.1rem; /* Use relative units for font sizes */
+  font-weight: 500;
+  text-align: center; /* Center-align text */
+}
+
+.location label {
+  color: black;
+  margin-right: 20px;
+  opacity: 0.8; /* Opacity should be less than 1 */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1200px) {
+  .location h5 {
+    font-size: 1rem;
+  }
+
+  .location label {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .location h5 {
+    font-size: 0.9rem;
+  }
+
+  .location label {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .location h5 {
+    font-size: 0.85rem;
+  }
+
+  .location label {
+    margin-right: 5px;
+  }
+
+  .location .overlay {
+    height: 200px; /* Adjust overlay height */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .location h5 {
+    font-size: 0.75rem;
+  }
+
+  .location label {
+    margin-right: 0;
+    font-size: 0.75rem; /* Adjust font size for smaller screens */
+  }
+
+  .location .overlay {
+    height: 150px; /* Further adjust overlay height */
+  }
+}
